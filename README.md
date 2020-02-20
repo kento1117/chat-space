@@ -42,4 +42,3 @@
 |username|string|null: false|
 ### Association
 - belongs_to :user
-
