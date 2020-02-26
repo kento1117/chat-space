@@ -1,13 +1,14 @@
 .side_bar
   .side_bar__usename
-    kento
+    = current_user.name
     .side_bar__usename__top_items
       = link_to "#", class: "side_bar__usename__top_items__btn" do
         = icon('fas', 'edit')
       = link_to "#", class: "side_bar__usename__top_items__btn" do
         = icon('fas', 'cog')
   .side_bar__group_list
-    techcamp
+    = link_to edit_user_path(current_user) do
+      = icon('fas', 'cog', class: 'icon')
     .side_bar__group_list__groupname
       まだメッセージがありません
 
