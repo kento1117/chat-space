@@ -35,6 +35,8 @@
     width: 300px;
     font-size: 15px;
     padding: 20px 20px 5px 20px;
+    color: black
+    ;
       
     }
     
@@ -42,6 +44,13 @@
   .group__message {
     font-size: 11px;
     margin-top: 5px;
+    color: white;
+  }
+  .group__name{
+    color: white;
+  }
+  .group {
+    color: white;
   }
 
 
@@ -138,58 +147,58 @@
     background-color: #d2d2d2;
     height: 90px;
     width: calc(100vw - 300px);
-    
-    
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 10px;
-    
+    float: left;
+    padding: 20px 40px;
     &__group {
-      display:flex;
+      position: relative;
       justify-content: space-between;
-      height: 50px;
       
-    &__btn {
-        border: solid 1px #38aef0;
-        background-color: #38aef0;
-        color: #fafafa;
-        margin-right: 40px;
-        padding-top: 15px;
-        padding-right: 30px;
-        padding-left: 30px;
-        
-      }
-      &__masuku {
+      &__text_area{
         background-color: #ffffff;
         position: relative;
-        width: 80%;
+        width: 100%;
         padding-top: 10px;
         padding-left: 10px;
         color: #999999;
-          &__huxairu__btn {
-            position: absolute; 
-            right: 30px;
+        height: 50px;
+      }
+      &__masuku {
+        color: black;
+        position: absolute;
+        right: 120px;
+        font-size: 1.3rem;
+        top: 10px;
+        &image__btn {
+          
+              }
+      }
+      &__sendbtn {
+        border: solid 1px #38aef0;
+        background-color: #38aef0;
+        color: #fafafa;
+        padding-right: 20px;
+        padding-left: 20px; 
+        margin-left: 15px;    
+        }
 
-            &__icon {
-              color: blue;
-              
-              
-
-            }
-
+      
+    
+      
         }
       
-
-          
-        } 
-      
     }
     
     
     
     }
-    
-  }
+    .new_message {
+      display: flex;
+      position: relative;
+    }
+    .hidden {
+      display: none;
+    }
+  
 
 
 
