@@ -6,14 +6,18 @@
         = icon('fas', 'edit')
       = link_to "#", class: "side_bar__usename__top_items__btn" do
         = icon('fas', 'cog')
+
+
   .side_bar__group_list
     - current_user.groups.each do |group|
-      .group
-        = link_to '#' , class: "group__btn" do
+      .groupgroup_messages_path
+        = link_to group_messages_path(group) do
           .group__name
             = group.name
           .group__message
-            メッセージはまだありません。
+            = group.show_last_message
+
+            -# = link_to '#' , class: "group__btn" do
   
 
 
