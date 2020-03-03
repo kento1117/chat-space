@@ -31,7 +31,6 @@
       
     .chat_main__message_list__user-massage2
       
-    
   .chat_main__message_form
     = form_for [@group, @message], haml: {class: "chat_main__message_form__group" } do |f|
       = f.text_field :content, class: "chat_main__message_form__group__text_area", placeholder: 'type a message'
