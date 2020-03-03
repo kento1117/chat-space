@@ -56,17 +56,19 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.chat_main__message_list').append(html);      
-       $('form')[0].reset();
-         $('.chat_main__message_list').animate({ scrollTop: $('.chat_main__message_list')[0].scrollHeight});
-          // $(".chat_main__message_form__group__sendbtn").click(function() {
-            $('.chat_main__message_form__group__sendbtn').prop('disabled', false);
-          })
-               $('.chat_main__message_form__group__sendbtn').click(function() {
-                  $('input').prop('disabled', false)
-               });
-})
+      $('form')[0].reset();
+      $('.chat_main__message_list').animate({ scrollTop: $('.chat_main__message_list')[0].scrollHeight});
+      $('.chat_main__message_form__group__sendbtn').prop('disabled', false);
     })
+    .fail(function() {
+      alert("メッセージ送信に失敗しました");
+      $('.chat_main__message_form__group__sendbtn').prop('disabled', false);
+    })
+    .always(function() {
+      $('.chat_main__message_form').prop('disabled', false);   // 対象セレクタは書き換えてください。
+    });          
+  })
+})
+    
   
-// });
 
-// id="commit" type="submit" disabled>
