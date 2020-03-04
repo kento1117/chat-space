@@ -19,19 +19,18 @@
     = render @messages
     .chat_main__message_list__group
       .chat_main__message_list__user-name
-        ken
+        
       .chat_main__message_list__time
-        2019/11/20(Wed)17:43:01
+      
     .chat_main__message_list__user-massage
-      おはよう！
+      
     .chat_main__message_list__group2
       .chat_main__message_list__user-name2
-        ken
+      
       .chat_main__message_list__time2
-        2019/11/20(Wed)17:43:02
+      
     .chat_main__message_list__user-massage2
-      今日は夜から雨
-    
+      
   .chat_main__message_form
     = form_for [@group, @message], haml: {class: "chat_main__message_form__group" } do |f|
       = f.text_field :content, class: "chat_main__message_form__group__text_area", placeholder: 'type a message'

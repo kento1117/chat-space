@@ -100,7 +100,7 @@
     width: calc(100vw - 300px);
     padding-top: 35px;
     padding-left: 40px;
-  
+    overflow: scroll;
     &__group {
       display:flex;
     }
@@ -169,7 +169,7 @@
         font-size: 1.3rem;
         top: 10px;
         &image__btn {
-          
+          color: white;
               }
       }
       &__sendbtn {
