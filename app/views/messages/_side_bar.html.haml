@@ -11,14 +11,9 @@
   .side_bar__group_list
     - current_user.groups.each do |group|
       .groupgroup_messages_path
-        = link_to group_messages_path(group) do
+        = link_to group_messages_path(group),class: "side-name" do
           .group__name
             = group.name
           .group__message
             = group.show_last_message
-
-            -# = link_to '#' , class: "group__btn" do
-  
-
-
-  
+ 
